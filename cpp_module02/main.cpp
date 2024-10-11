@@ -6,7 +6,7 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:53:41 by dcarrilh          #+#    #+#             */
-/*   Updated: 2024/10/10 16:56:23 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:36:01 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,11 @@ int main()
 
   ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
 
+  ATarget* wall1 = tarGen.createTarget("Inconspicuousll");
+
+  
   richard.introduce();
+  richard.launchSpell("Pomorph", *wall);
   richard.launchSpell("Polymorph", *wall);
-  richard.launchSpell("Fireball", *wall);
+  richard.launchSpell("Fireball", *wall1);
 }

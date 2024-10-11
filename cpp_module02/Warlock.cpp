@@ -6,7 +6,7 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:36:03 by dcarrilh          #+#    #+#             */
-/*   Updated: 2024/10/10 17:11:46 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:35:22 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ void Warlock::forgetSpell(std::string spell)
 
 void Warlock::launchSpell(std::string spell, const ATarget &target)
 {
-    // for(unsigned int i = 0; i < _spells.size(); i++)
-    // {
-    //     if (_spells[i]->getName() == spell)
-    //         target.getHitBySpell(*_spells[i]);
-    // }
-    target.getHitBySpell(*_spells->createSpell(spell));
+    ATarget *teste = 0;
+    if (teste == &target)
+        return ;
+    ASpell *test = _spells->createSpell(spell);
+    if (test)
+        target.getHitBySpell(*test);
 }
